@@ -1,0 +1,15 @@
+.dogTypeSelector {
+    display: flex;
+}
+
+.dogTypeSelector__item {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.dogTypeSelector__item img {
+    width: 75px;
+    height: 75px;
+    background: orange;
+    border-radius: 50%;
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "type":"Petit chien",
+        "id":"small_dog",
+        "icon":"url"
+    },
+    {
+        "type":"Moyen chien",
+        "id":"medium_dog",
+        "icon":"url"
+    },
+    {
+        "type":"Gros chien",
+        "id":"big_dog",
+        "icon":"url"
+    },
+    {
+        "type":"Tous types de chiens",
+        "id":"all_dogs",
+        "icon":"url"
+    }
+]

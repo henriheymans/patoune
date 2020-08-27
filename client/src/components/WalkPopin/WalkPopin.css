@@ -1,0 +1,109 @@
+.l-walkpopin {
+
+}
+
+.walkpopin-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+.walkpopin-popin {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    max-height: 80vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background:whitesmoke;
+    border-radius: 5px;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    padding: 50px 75px;
+}
+
+.walkpopin-user {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.walkpopin-user-avatar img {
+    height: 60px;
+    width: auto;
+    margin-right: 10px;
+    background: orange;
+    padding: 5px;
+    border-radius: 50%;
+    border: solid 2px lightcoral;
+}
+
+.user-name {
+    margin-bottom: 10px;
+}
+
+.walkpopin-image  {
+    width: 100%;
+    margin: auto;
+    height: 400px;
+    max-height: 400px;
+
+}
+
+.walkpopin-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.walkpopin-walk-informations {
+    margin-top: 25px;
+}
+
+.walk-informations-walkName {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.walk-informations-walkAddress {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.walk-informations-tiles {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.walk-tile-item {
+    margin: 0 10px;
+}
+
+.walk-tile-item-icon {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    background: salmon;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.walk-tile-item-text {
+    text-align: center;
+}
+
+.walk-tile-item-text p {
+    font-size: 20px;
+}
+
+.walk-inscription-button-container {
+    text-align: center;
+    margin-top: 50px;
+}

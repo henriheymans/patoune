@@ -1,0 +1,30 @@
+.newWalkWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(25%, -50%);
+    height: auto;
+    width: 500px;
+    background:white;
+    padding: 25px;
+    max-height: 90vh;
+    overflow-y: scroll;
+}
+
+.newWalkWindow__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.newWalkWindow__form__section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.newWalkWindow__form__section img {
+    height: 50px;
+    width: 50px;
+}

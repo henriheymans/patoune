@@ -1,0 +1,15 @@
+.durationCounter {
+    display: flex;
+}
+
+.durationCounter__button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+}
+
+.durationCounter__text {
+    margin: auto 50px;
+}
