@@ -117,5 +117,5 @@ const CustomMap = (props) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyBOOYZfFEQlTRvkxWrrD2juSgiyUKxX0Us",
+  apiKey: process.env.REACT_APP_MAPS_API_KEY,
 })(CustomMap);
