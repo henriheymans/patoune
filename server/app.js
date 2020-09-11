@@ -21,7 +21,6 @@ mongoose.connect(process.env.DB_HOST,
         useUnifiedTopology: true
     },
     () => console.log('connected to db'));
-
 /** DEFINE ROUTES **/
 app.use('/walks', router.Walks);
 

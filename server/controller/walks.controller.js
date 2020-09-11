@@ -3,11 +3,13 @@ const WalksService = require('../service/walks.service');
 exports.getAll = async(req, res) => {
     try {
         const walksList = await WalksService.getAll();
+        console.log("Walklist => ", walksList)
         return res.status(200).json({
             walksList
         })
     }
     catch(error) {
+        console.log(error.message)
         return res.status(400).json({
             message: error.message
         })

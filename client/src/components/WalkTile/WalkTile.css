@@ -1,0 +1,36 @@
+.walkTile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 50px 0;
+}
+
+.walkTile-image {
+    width: 45%;
+}
+
+.walkTile-image img {
+    width: 100%;
+}
+
+.walkTile-text {
+    padding: 0 15px;
+    position: relative;
+}
+
+.walkTile-text-name {
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.walkTile-information {
+    font-size: 16px;
+    color: #4c4c4c;
+    padding-bottom: 5px;
+}
+
+.walkTile-text-duration {
+    position: absolute;
+    bottom: 0;
+}

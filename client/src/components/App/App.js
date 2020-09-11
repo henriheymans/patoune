@@ -2,12 +2,12 @@ import React from "react";
 import "./App.css";
 
 // Import components
-import CustomMap from "../CustomMap/CustomMap";
+import WalksPage from "../WalksPage/WalksPage";
 
 function App() {
   return (
     <div className="App">
-      <CustomMap />
+      <WalksPage />
     </div>
   );
 }

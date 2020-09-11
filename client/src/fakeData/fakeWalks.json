@@ -1,0 +1,49 @@
+[
+{
+  "_id": "5f269de1a4599511107cda7a",
+  "latitude": "43.48555756466332",
+  "longitude": "-1.509133230627444",
+  "creatorId": "test",
+  "startDate":"1596366305995",
+  "duration": "60",
+  "dogType": "medium_dog",
+  "participantsNumber": "3",
+  "closed": false,
+  "__v": "0"
+},
+{
+  "_id": "5f269deea4599511107cda7b",
+  "latitude": "43.46643633775831",
+  "longitude": "-1.5198620666870144",
+  "creatorId": "test",
+  "startDate":"1596366318429",
+  "duration": "90",
+  "dogType": "big_dog",
+  "participantsNumber": "3",
+  "closed": false,
+  "__v": "0"
+},
+{
+  "_id": "5f286e92a031de1bf48057ac",
+  "latitude": "43.4749312992834",
+  "longitude": "-1.5545514079543454",
+  "creatorId": "test",
+  "startDate":"1596485266847",
+  "duration": "90",
+  "dogType": "medium_dog",
+  "participantsNumber": "3",
+  "closed": false,
+  "__v": "0"
+},
+{
+  "_id": "5f2eefb60e2cb50e7c5af813",
+  "latitude": "43.47622350363859",
+  "longitude": "-1.4845691633946645",
+  "creatorId": "test",
+  "startDate":"1596911542123",
+  "duration": "90",
+  "dogType": "big_dog",
+  "participantsNumber": "4",
+  "closed": false,
+  "__v": "0"
+}]
