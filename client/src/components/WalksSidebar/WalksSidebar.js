@@ -16,6 +16,8 @@ const WalksSidebar = props => {
                     <WalkTile 
                         name="Balade dans la forêt des arbres !"
                         participantsNumber={walkList[walkItem].participantsNumber}
+                        latitude={walkList[walkItem].latitude}
+                        longitude={walkList[walkItem].longitude}
                         dogType={walkList[walkItem].dogType}
                         duration={walkList[walkItem].duration}
                         startDate={walkList[walkItem].startDate}

@@ -28,6 +28,14 @@
     padding: 50px 75px;
 }
 
+.walkpopin-close {
+    position: absolute;
+    right: 75px;
+    top: 15px;
+    cursor:pointer;
+    font-size: 25px;
+}
+
 .walkpopin-user {
     display: flex;
     margin-bottom: 25px;

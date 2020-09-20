@@ -11,6 +11,14 @@
     overflow-y: scroll;
 }
 
+.newWalkWindow_close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
 .newWalkWindow__form {
     display: flex;
     flex-direction: column;

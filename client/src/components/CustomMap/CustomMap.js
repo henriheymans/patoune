@@ -45,6 +45,7 @@ const CustomMap = (props) => {
         .then(response => response.json())
         .then(data => setSelectedWalk(data))
       setShowWalkPopin(!showWalkPopin);
+      console.log(showWalkPopin)
   }
 
   // CLICK ON MAP (NOT MARKER)
@@ -56,10 +57,16 @@ const CustomMap = (props) => {
     setNewWalkWindow(true);
   }
 
+  const closeWalkPopin = () => {
+    setShowWalkPopin(false);
+  }
 
-  
+  const closeNewWalkWindow = () => {
+    setNewWalkWindow(false);
+  }
+
   return (
-        <div className="l-customMap">
+        <div className={`l-customMap ${showNewWalkWindow === true ? 'customMap--fullscreen' : ""} ${showWalkPopin === true ? 'customMap--fullscreen' : ""}`}>
           <Map
             google={props.google}
             center={mapCenter}
@@ -102,10 +109,10 @@ const CustomMap = (props) => {
             }
           </Map>
           {
-            showNewWalkWindow && <NewWalkWindow position={mapCenter} />                
+            showNewWalkWindow === true ? <NewWalkWindow position={mapCenter} closeNewWalkWindow={closeNewWalkWindow} /> : ""               
           }
           {
-            showWalkPopin && <WalkPopin walkInformations={selectedWalk} />
+            showWalkPopin === true ? <WalkPopin closeWalkPopin={closeWalkPopin} walkInformations={selectedWalk} /> :""
           }
       </div>
   );

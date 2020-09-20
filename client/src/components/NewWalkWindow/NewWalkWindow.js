@@ -85,6 +85,7 @@ const NewWalkWindow = props => {
 
     return (
         <div className="newWalkWindow">
+            <div className="newWalkWindow_close" onClick={props.closeNewWalkWindow}>X</div>
             <form className="newWalkWindow__form">
                 <h1>Ajouter une nouvelle balade</h1>
                 <Calendar

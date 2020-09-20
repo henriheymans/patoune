@@ -5,11 +5,11 @@ import WalkImage from "../../img/nature.jpg";
 import Avatar from "../../img/icons/avatar.png";
 
 const WalkPopin = (props) => {
-    console.log(props)
     return (
         <div className="l-walkpopin">
             <div className="walkpopin-overlay"></div>
             <div className="walkpopin-popin">
+                <div onClick={props.closeWalkPopin} className="walkpopin-close">X</div>
                 <div className="walkpopin-user">
                     <div className="walkpopin-user-avatar">
                         <img loading="lazy" src={Avatar} />

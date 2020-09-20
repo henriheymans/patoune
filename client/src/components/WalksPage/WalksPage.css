@@ -3,6 +3,7 @@
     max-width: 100vw;
     max-height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 .l-walks-sidebar {
@@ -13,8 +14,17 @@
     overflow-y: scroll;
 }
 
+.l-walks-sidebar.sidebar--hidden {
+    right: 45vw;
+}
+
 .l-customMap {
     position: relative;
     width: 55vw;
     height: 100vh;
+    transition: .2s ease;
+}
+
+.l-customMap.customMap--fullscreen {
+    width: 100vw;
 }
