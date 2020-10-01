@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
-import "./NewWalkWindow.css";
+import "./NewWalkWindow.scss";
 
 import DurationCounter from "../DurationCounter/DurationCounter";
 import DogTypeSelector from "../DogTypeSelector/DogTypeSelector";
@@ -84,31 +84,34 @@ const NewWalkWindow = props => {
     }
 
     return (
-        <div className="newWalkWindow">
-            <div className="newWalkWindow_close" onClick={props.closeNewWalkWindow}>X</div>
-            <form className="newWalkWindow__form">
-                <h1>Ajouter une nouvelle balade</h1>
-                <Calendar
-                    value={startDate}
-                    onChange={changeStartDate}
-                />
-                <div className="newWalkWindow__form__section">
-                    <img src={clockIcon} />
-                    <h3>Durée de la balade</h3>
-                    <DurationCounter duration={walkDuration} incrementDuration={incrementDurationCounter} decrementDuration={decrementDurationCounter} />
-                </div>
-                <div className="newWalkWindow__form__section">
-                    <img src={dogIcon} />
-                    <h3>Type de chiens acceptés</h3>
-                    <DogTypeSelector dogTypeList={dogTypeList} handleClick={selectDogType} />
-                </div>
-                <div className="newWalkWindow__form__section">
-                    <img src={peopleIcon} />
-                    <h3>Nombre de participants</h3>
-                    <ParticipantsCounter participants={maximumParticipants} incrementParticipants={incrementParticipantsCounter} decrementParticipants={decrementParticipantsCounter} />
-                </div>
-                <input type="submit" value="Créer la balade" onClick={createNewWalk} />
-            </form>
+        <div className="l-newWalkWindow">
+            <div className="newWalkWindow-overlay"></div>
+            <div className="newWalkWindow">
+                <div className="newWalkWindow_close" onClick={props.closeNewWalkWindow}>X</div>
+                <form className="newWalkWindow__form">
+                    <h1>Ajouter une nouvelle balade</h1>
+                    <Calendar
+                        value={startDate}
+                        onChange={changeStartDate}
+                    />
+                    <div className="newWalkWindow__form__section">
+                        <img src={clockIcon} />
+                        <h3>Durée de la balade</h3>
+                        <DurationCounter duration={walkDuration} incrementDuration={incrementDurationCounter} decrementDuration={decrementDurationCounter} />
+                    </div>
+                    <div className="newWalkWindow__form__section">
+                        <img src={dogIcon} />
+                        <h3>Type de chiens acceptés</h3>
+                        <DogTypeSelector dogTypeList={dogTypeList} handleClick={selectDogType} />
+                    </div>
+                    <div className="newWalkWindow__form__section">
+                        <img src={peopleIcon} />
+                        <h3>Nombre de participants</h3>
+                        <ParticipantsCounter participants={maximumParticipants} incrementParticipants={incrementParticipantsCounter} decrementParticipants={decrementParticipantsCounter} />
+                    </div>
+                    <input type="submit" value="Créer la balade" onClick={createNewWalk} />
+                </form>
+            </div>
         </div>
     );
 }

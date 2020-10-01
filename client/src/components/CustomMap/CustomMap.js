@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
-import "./CustomMap.css";
+import "./CustomMap.scss";
 import mapOptions from "../../helpers/mapOptions.json";
 
 
@@ -14,9 +14,11 @@ const CustomMap = (props) => {
   let [mapCenter, setMapCenter] = useState({});
   // let [call, setCall] = useState(false);
   // let [walks, setWalks] = useState([]);
+  let [visibleMarkers, setVisibleMarkers] = useState([]);
   let [showNewWalkWindow, setNewWalkWindow] = useState(false);
   let [selectedWalk, setSelectedWalk] = useState({});
   let [showWalkPopin, setShowWalkPopin] = useState(false);
+
 
   const _mapLoaded = (mapProps, map) => {
     map.setOptions({
@@ -45,7 +47,12 @@ const CustomMap = (props) => {
         .then(response => response.json())
         .then(data => setSelectedWalk(data))
       setShowWalkPopin(!showWalkPopin);
-      console.log(showWalkPopin)
+  }
+
+  const onBoundsChange = (mapProps, map) => {
+    let mapBounds = map.getBounds();
+    let newMarkers = props.walksList.filter(item => mapBounds.contains(item.position));
+    setVisibleMarkers(newMarkers);
   }
 
   // CLICK ON MAP (NOT MARKER)
@@ -71,6 +78,8 @@ const CustomMap = (props) => {
             google={props.google}
             center={mapCenter}
             onClick={onMapClicked}
+            onDragend={onBoundsChange}
+            onZoomChanged={onBoundsChange}
             onReady={(mapProps, map) => _mapLoaded(mapProps,map)}
           >
             <Marker
@@ -82,18 +91,18 @@ const CustomMap = (props) => {
 
             />
             {
-                props.walksList && Object.keys(props.walksList).map(item => 
+                visibleMarkers && visibleMarkers.map(item => 
                     <Marker position={{
-                        lat:props.walksList[item].latitude,
-                        lng:props.walksList[item].longitude,
+                        lat:item.latitude,
+                        lng:item.longitude,
                     }}
                     icon={{
                       url:'https://i.pinimg.com/originals/fb/14/dd/fb14dd05076c9cfd88a7d85b9ddc9f1a.png',
                       scaledSize: new props.google.maps.Size(64,64)
 
                     }}
-                    key={props.walksList[item]._id}
-                    walkId={props.walksList[item]._id}
+                    key={item._id}
+                    walkId={item._id}
                     onClick={onClick}
                 />
                 )

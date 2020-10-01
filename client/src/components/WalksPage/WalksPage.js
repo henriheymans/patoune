@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import CustomMap from "../CustomMap/CustomMap";
 import WalksSidebar from "../WalksSidebar/WalksSidebar";
 
-import "./WalksPage.css";
+import "./WalksPage.scss";
 
 import fakeWalks from "../../fakeData/fakeWalks.json";
 

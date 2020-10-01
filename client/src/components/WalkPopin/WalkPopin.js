@@ -3,7 +3,9 @@ import "./WalkPopin.css";
 
 import WalkImage from "../../img/nature.jpg";
 import Avatar from "../../img/icons/avatar.png";
-
+import DogIcon from "../../img/icons/dog_icon.png"
+import ClockIcon from "../../img/icons/clock_icon.png";
+import PeopleIcon from "../../img/icons/people_icon.png"
 const WalkPopin = (props) => {
     return (
         <div className="l-walkpopin">
@@ -27,32 +29,31 @@ const WalkPopin = (props) => {
                     <h4 className="walk-informations-walkAddress">12 Rue de la nouvelle Fôret, 64 600 Anglet</h4>
                     <p className="walk-informations-proximityNumber">35 balades se sont déjà faites à cet endroit !</p>
                     <div className="walk-informations-tiles">
+
                         <div className="walk-tile-item">
                             <div className="walk-tile-item-icon">
+                                <img src={ClockIcon} />
                             </div>
                             <div className="walk-tile-item-text">
-                                <p>Vite ! La balade débutera bientôt !</p>
+                                <p>Durée : 45 minutes</p>
+                                <p>Départ : 15h30</p>
+
                             </div>
                         </div>
                         <div className="walk-tile-item">
                             <div className="walk-tile-item-icon">
+                                <img src={DogIcon} />
                             </div>
                             <div className="walk-tile-item-text">
-                                <p>Cette balade durera environ 45 minutes</p>
+                                <p>Tous chiens acceptés</p>
                             </div>
                         </div>
                         <div className="walk-tile-item">
                             <div className="walk-tile-item-icon">
+                                <img src={PeopleIcon} />
                             </div>
                             <div className="walk-tile-item-text">
-                                <p>Tous les chiens sont acceptés pour cette balade !</p>
-                            </div>
-                        </div>
-                        <div className="walk-tile-item">
-                            <div className="walk-tile-item-icon">
-                            </div>
-                            <div className="walk-tile-item-text">
-                                <p>7 / 15 personnes participent à cette balade</p>
+                                <p>Encore 3 places disponibles</p>
                             </div>
                         </div>
                     </div>

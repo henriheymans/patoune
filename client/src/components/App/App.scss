@@ -1,3 +1,5 @@
+@import "../../style/vars.scss";
+
 * {
     margin: 0;
     padding: 0;
@@ -11,15 +13,14 @@
 }
 
 .global-button {
-    background-color: #ee9617;
-    background-image: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
-        
+    background: #FF9A76;
     border: none;
-    color:white;
-    padding: 20px 40px;
+    color: white;
+    padding: 12px 40px;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 100;
     border-radius: 10px;
     cursor: pointer;
+    border-radius: 25px;
 }

@@ -14,9 +14,9 @@
 
 .walkpopin-popin {
     width: 100%;
-    max-width: 1100px;
+    max-width: 800px;
     height: auto;
-    max-height: 80vh;
+    max-height: 95vh;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -25,20 +25,25 @@
     z-index: 10;
     transform: translate(-50%, -50%);
     overflow-y: scroll;
-    padding: 50px 75px;
+    border-radius: 25px;
 }
 
 .walkpopin-close {
     position: absolute;
-    right: 75px;
+    right: 25px;
     top: 15px;
     cursor:pointer;
     font-size: 25px;
+    background:white;
+    padding:5px 10px;
+    border-radius: 100%;
 }
 
 .walkpopin-user {
     display: flex;
     margin-bottom: 25px;
+    position: absolute;
+    padding: 25px;
 }
 
 .walkpopin-user-avatar img {
@@ -53,6 +58,11 @@
 
 .user-name {
     margin-bottom: 10px;
+    color:white;
+}
+
+.user-rank {
+    color:white;
 }
 
 .walkpopin-image  {
@@ -71,6 +81,7 @@
 
 .walkpopin-walk-informations {
     margin-top: 25px;
+    text-align: center;
 }
 
 .walk-informations-walkName {
@@ -87,20 +98,27 @@
 .walk-informations-tiles {
     margin-top: 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .walk-tile-item {
-    margin: 0 10px;
+    margin: 0 30px;
+    flex-basis: 0;
+    flex: 1 1 0px;
 }
 
 .walk-tile-item-icon {
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     margin: auto;
-    background: salmon;
     border-radius: 50%;
     margin-bottom: 25px;
+}
+
+.walk-tile-item-icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .walk-tile-item-text {
@@ -113,5 +131,6 @@
 
 .walk-inscription-button-container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 25px;
+    padding-bottom: 25px;
 }
